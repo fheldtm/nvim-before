@@ -1,3 +1,10 @@
+local has = function(x)
+  return vim.fn.has(x) == 1
+end
+
+local is_mac = has "macunix"
+local is_win = has "win32"
+
 vim.opt.guicursor = ""
 
 vim.opt.nu = true
@@ -14,7 +21,12 @@ vim.opt.wrap = false
 
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+if is_mac then
+  vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+end
+if is_win then
+  vim.opt.undodir = os.getenv("USERPROFILE") .. "\\.vim\\undodir"
+end
 vim.opt.undofile = true
 
 vim.opt.hlsearch = false
