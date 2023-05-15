@@ -110,7 +110,7 @@ end
 tree.setup({
   sort_by = "case_sensitive",
   view = {
-    width = 40,
+    width = 30,
   },
   on_attach = on_attach,
   renderer = {
