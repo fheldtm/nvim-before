@@ -51,5 +51,5 @@ vim.keymap.set('n', 's-', '<C-w>-')
 -- default key unbind
 vim.keymap.set('n', 's', '<Nop>', { silent = true })
 vim.keymap.set('n', 'S', '<Nop>', { silent = true })
-vim.keymap.set('n', '<C-v>', '<Nop>', { silent = true })
+vim.keymap.set('i', '<C-v>', '<Nop>', { silent = true })
 
