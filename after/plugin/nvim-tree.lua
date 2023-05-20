@@ -121,7 +121,8 @@ tree.setup({
   },
 })
 
-vim.keymap.set('n', ';v', ':lua ToggleNvimTree()<CR>')
+vim.keymap.set('n', ';v', ':lua ToggleNvimTree()<CR>') -- toggle nvim-tree
+vim.keymap.set('n', ';x', ':NvimTreeClose<CR>') -- close nvim-tree
 
 function ToggleNvimTree()
   local current_buffer = vim.api.nvim_get_current_buf()
